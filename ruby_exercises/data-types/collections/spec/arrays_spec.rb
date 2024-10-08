@@ -108,7 +108,7 @@ RSpec.describe 'Arrays' do
     expect(some_teams).to eq(["Avalanche", "Nuggets", "Broncos"])
 
     # Now use a different method on the teams variable to get the first and second teams
-    some_teams = teams.take_fi(teams)
+    some_teams = teams.take_first_two(teams)
     expect(some_teams).to eq(["Rockies", "Avalanche"])
   end
 
