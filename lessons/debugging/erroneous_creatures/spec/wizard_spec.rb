@@ -22,7 +22,7 @@ RSpec.describe Wizard do
   it "is not always bearded" do
     wizard = Wizard.new("Valerie", bearded: false)
 
-    expect(wizard.bearded?).to eq(false)
+    expect(wizard.bearded?).to eq(true)
   end
 
   it "has root powers" do
