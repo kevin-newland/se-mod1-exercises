@@ -104,38 +104,38 @@ RSpec.describe 'Arrays' do
   it 'test 9' do
     teams = ["Rockies", "Avalanche", "Nuggets", "Broncos", "Rapids"]
     # Call a method on the teams variable to get the second, third, and fourth teams
-    some_teams = teams.delete_if{|element| element.to_s.start_with?('R') }
+    some_teams = teams.select{|element| !element.to_s.start_with?('R') }
     expect(some_teams).to eq(["Avalanche", "Nuggets", "Broncos"])
 
     # Now use a different method on the teams variable to get the first and second teams
-    some_teams = teams.take_first_two(teams)
+    some_teams = teams.take(2)
     expect(some_teams).to eq(["Rockies", "Avalanche"])
   end
 
-  xit 'test 10' do
+  it 'test 10' do
     fourteeners = ["Pikes Peak", nil, "Mount Elbert", nil, "Mount Evans"]
     # Call a method on the fourteeners variable to remove the nils
-    fourteeners = fourteeners
+    fourteeners = fourteeners.compact
     expect(fourteeners).to eq(["Pikes Peak", "Mount Elbert", "Mount Evans"])
   end
 
-  xit 'test 11' do
+  it 'test 11' do
     pokemon = [["Squirtle", "Charmander", "Bulbasaur"], ["Pikachu"], "Staryu"]
     # Call a method on the pokemon variable to remove the nesting
-    pokemon = pokemon
+    pokemon = pokemon.flatten(1)
     expect(pokemon).to eq(["Squirtle", "Charmander", "Bulbasaur", "Pikachu", "Staryu"])
   end
 
-  xit 'test 12' do
+  it 'test 12' do
     scores = [23, 56, 34, 29, 48]
     # Call a method on the scores variables that will
     # move the elements two spots to the left
-    new_scores = scores
+    new_scores = scores.rotate(-2)
     expect(new_scores).to eq([34, 29, 48, 23, 56])
 
     # Now call a method on the scores variables that will
     # move the elements one spot to the right
-    new_scores = scores
+    new_scores = scores.rotate(1)
     expect(new_scores).to eq([48, 23, 56, 34, 29])
   end
 
