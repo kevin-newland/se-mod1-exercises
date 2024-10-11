@@ -5,16 +5,16 @@ class Medusa
 
   def initialize(name)
     @name = name
-    @statues = []
+    @statues 
   end
 
   def stare(x)
     x.stone = true
-    @statues = x
+    @statues = []
   end
 
   def statues
-    @statues
+    @statues = []
   end
 
 end
@@ -30,7 +30,7 @@ class Person
   end
 
   def stoned?
-    @stone
+    @stone 
   end
 
 end
