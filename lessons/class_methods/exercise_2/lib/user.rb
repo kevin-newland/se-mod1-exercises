@@ -3,21 +3,26 @@ require "pry"
 
 
 class User
+
+  @@all_new_users = []
+
   attr_reader :name
   def initialize(name)
     @name = name
-    #binding.pry ##What is the @name property?
+    # binding.pry ##What is the @name property?
   end
 
   def say_hello
-    #binding.pry ##What will be output here?
+    # binding.pry ##What will be output here?
     "Hello, " + @name
   end
 
   def self.create_multiple(users)
     users.map do |user|
       new_user = User.new(user[:name])
-      #binding.pry ## What is new_user? What properties does it have?
+      @@all_new_users << new_user
+      # binding.pry ## What is new_user? What properties does it have?
     end
+    @@all_new_users
   end
 end

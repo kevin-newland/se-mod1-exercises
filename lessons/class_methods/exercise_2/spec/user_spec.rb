@@ -7,12 +7,12 @@ RSpec.describe User do
     user = User.new("Alex")
   end
 
-  xit "can say hello" do
+  it "can say hello" do
     user = User.new("Alex")
     expect(user.say_hello).to eq("Hello, Alex")
   end
 
-  xit "can create multiple users" do
+  it "can create multiple users" do
     users = [
         {name: "Sal"},
         {name: "Brian"},

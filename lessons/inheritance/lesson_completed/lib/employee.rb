@@ -7,7 +7,7 @@ class Employee
     @name = name
     @id = id
     # If we uncomment this pry, what will be output when we type `self` or `self.class` in the Terminal?
-    #  binding.pry
+    # binding.pry
   end
 
   def total_compensation

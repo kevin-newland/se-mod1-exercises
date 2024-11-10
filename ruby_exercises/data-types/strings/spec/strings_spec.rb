@@ -5,7 +5,7 @@ RSpec.describe 'Strings' do
     # In place of the line below, call a method on the name variable
     # defined above to acheive the expected output.
     actual = name.capitalize
-    expected = "Alice"
+    expected = "Alice" 
   
     expect(actual).to eq(expected)
   end

@@ -5,17 +5,18 @@ class Medusa
 
   def initialize(name)
     @name = name
-    @statues 
+    @statues = [] 
   end
 
-  def stare(x)
-    x.stone = true
-    @statues = []
+  def stare(victim)
+    victim.stone = true
+    @statues << victim
   end
 
-  def statues
-    @statues = []
-  end
+  # def statues
+    
+  #   @statues = []
+  # end
 
 end
 

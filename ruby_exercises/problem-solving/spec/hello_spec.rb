@@ -1,4 +1,5 @@
 require "./lib/hello"
+require "rspec"
 
 RSpec.describe Hello do
 

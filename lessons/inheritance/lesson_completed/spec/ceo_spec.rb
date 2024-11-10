@@ -5,6 +5,7 @@ RSpec.describe Ceo do
   describe "setup" do
     it "exists" do
       ceo = Ceo.new(15,20, "Ali", 111)
+      expect(ceo).to be_a(Ceo)
     end
     it "has base_salary and bonus attributes" do
       ceo = Ceo.new(15,20, "Ali", 111)

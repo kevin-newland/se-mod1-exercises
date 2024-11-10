@@ -1,3 +1,4 @@
+require "./lib/deliverable"
 require './lib/amazon_order'
 
 RSpec.describe AmazonOrder do

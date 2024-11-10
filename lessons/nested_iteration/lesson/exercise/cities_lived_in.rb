@@ -1,3 +1,5 @@
+require 'pry'
+
 cities_lived_in = {
     michaela: ["Philadelphia", "Fort Collins", "Seattle"],
     mike: ["Denver", "Santa Fe", "Philadelphia", "Portland"],
@@ -10,17 +12,33 @@ cities_lived_in = {
 # Get a unique list of all of the cities that these humans have lived in  
 # ["Philadelphia", "Fort Collins", "Seattle", "Denver", "Santa Fe", "Portland", "Lansing", "Columbus", "Austin"]
 
+# unique_cities = []
 
+# cities_lived_in.each do |person, cities|
+#   cities.each do |city|
+#     unique_cities << city
+      
+#   end
 
+# end
 
-# Problem #2: 
-# Write code that iterates through the `cities_lived_in` hash, and returns a list of  
-# names of the humans who've lived in Philadelphia.
+# p unique_cities.uniq
 
-# [:michaela, :mike, :alex]
-# or
-# ["Michaela", "Mike", "Alex"]
+# # Problem #2: 
+# # Write code that iterates through the `cities_lived_in` hash, and returns a list of  
+# # names of the humans who've lived in Philadelphia.
 
+# # [:michaela, :mike, :alex]
+# # or
+# # ["Michaela", "Mike", "Alex"]
+# philly_residents = []
+# cities_lived_in.each do |person,  cities|
+#     if cities.any?("Philadelphia")
+#       philly_residents << person.to_s.capitalize
+#     end
+#  #  binding.pry
+# end
+# p philly_residents
 
 
 
@@ -38,3 +56,16 @@ cities_lived_in = {
 #     "Columbus => 1,
 #     "Austin" => 1
 # }
+
+populations = {}
+
+cities_lived_in.each do |person, cities|
+  cities.each do |city|
+    if populations[city]
+        populations[city] += 1
+    else
+        populations[city] = 1
+    end
+  end
+end
+ p populations

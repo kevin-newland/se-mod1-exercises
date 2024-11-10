@@ -28,7 +28,9 @@ pets = ["Brutus", "Lucky", "Goldie", "Pepper", "Odie"]
 def names_ending_in_ie(names)
   names_ending_in_ie = []
   names.each do |name|
-  names_ending_in_ie << name if name.end_with?("ie")
+    if name.end_with?("ie")
+      names_ending_in_ie << 
+    end
   end
 end 
 
